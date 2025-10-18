@@ -1,32 +1,19 @@
 <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+    </style>
+  </defs>
+
   <!-- Dark green background (#0f2f2c) -->
   <rect width="400" height="400" fill="#0f2f2c"/>
 
-  <!-- Arabic Calligraphy "ذِكْر" with proper diacritics - BOLD and VISIBLE -->
-  <g transform="translate(200, 130)">
-    <!-- Letter "ذ" (Dhal) - large with curved tail sweeping downward -->
-    <path d="M -80 -70 Q -90 -50 -85 -20 Q -75 10 -55 35 Q -35 55 -5 65 Q 25 70 50 55"
-          stroke="white" stroke-width="24" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Arabic Calligraphy "ذِكْر" using actual text -->
+  <text x="200" y="160" font-family="Amiri, serif" font-size="140" font-weight="700" fill="white" text-anchor="middle" dominant-baseline="middle" direction="rtl">
+    ذِكْر
+  </text>
 
-    <!-- Kasra diacritic (small diagonal comma below ذ) -->
-    <path d="M -70 50 Q -60 65 -45 70" stroke="white" stroke-width="7" fill="none" stroke-linecap="round"/>
-
-    <!-- Letter "ك" (Kaf) - smooth wave-like curve -->
-    <path d="M 60 -65 Q 85 -60 105 -40 Q 120 -20 125 10 Q 128 40 110 65 Q 85 80 55 75 Q 30 70 20 50"
-          stroke="white" stroke-width="24" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-
-    <!-- Sukun diacritic (small curved mark above ك) -->
-    <path d="M 80 -75 Q 95 -85 110 -75" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
-
-    <!-- Letter "ر" (Ra) - elegant upward curve at end -->
-    <path d="M 130 -50 Q 155 -45 175 -20 Q 190 5 195 35 Q 192 65 170 80 Q 145 90 120 80 Q 105 70 100 50"
-          stroke="white" stroke-width="24" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-
-    <!-- Fatha diacritic (small mark above ر) -->
-    <path d="M 150 -65 L 170 -55" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
-  </g>
-
-  <!-- "My.Zikr" text in refined white serif font - BOLD -->
+  <!-- "My.Zikr" text in refined white serif font -->
   <text x="200" y="310" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="700" fill="white" text-anchor="middle" letter-spacing="3">
     My.Zikr
   </text>
