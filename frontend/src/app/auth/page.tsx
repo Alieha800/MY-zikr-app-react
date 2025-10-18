@@ -27,7 +27,7 @@ export default function AuthPage() {
       <div className="text-center mb-12">
         {/* Logo Image */}
         <div className="mb-4 flex justify-center">
-          <img src="/my-zikr-logo.svg" alt="My.Zikr Logo" className="w-40 md:w-48 h-40 md:h-48 object-contain" style={{ filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))' }} />
+          <img src="/my-zikr-logo-v2.svg" alt="My.Zikr Logo" className="w-40 md:w-48 h-40 md:h-48 object-contain" style={{ filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))' }} />
         </div>
         
         {/* Greeting */}
