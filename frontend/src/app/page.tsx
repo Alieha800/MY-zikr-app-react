@@ -1007,7 +1007,7 @@ export default function Home() {
           <div className="text-center mb-12">
             {/* Logo Image */}
             <div className="mb-4 flex justify-center">
-              <img src="/my-zikr-logo-v2.svg" alt="My.Zikr Logo" className="w-40 md:w-48 h-40 md:h-48 object-contain" style={{ filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))' }} />
+              <img src="/my-zikr-logo.png" alt="My.Zikr Logo" className="w-40 md:w-48 h-40 md:h-48 object-contain" style={{ filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))' }} />
             </div>
 
             {/* Welcome Message */}
@@ -1425,7 +1425,7 @@ export default function Home() {
 
             {/* Logo/App Name - Mobile Responsive */}
             <div className="flex-1 text-center flex justify-center">
-              <img src="/my-zikr-logo-v2.svg" alt="My.Zikr Logo" className="w-16 sm:w-18 md:w-20 h-16 sm:h-18 md:h-20 object-contain" style={{ filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2))' }} />
+              <img src="/my-zikr-logo.png" alt="My.Zikr Logo" className="w-16 sm:w-18 md:w-20 h-16 sm:h-18 md:h-20 object-contain" style={{ filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2))' }} />
             </div>
 
             {/* Notifications/Reminder - Mobile Responsive */}
@@ -2101,7 +2101,7 @@ export default function Home() {
 
               {/* Logo Image - Mobile Responsive */}
               <div className="mb-3 sm:mb-4 flex justify-center">
-                <img src="/my-zikr-logo-v2.svg" alt="My.Zikr Logo" className="w-32 sm:w-36 md:w-40 h-32 sm:h-36 md:h-40 object-contain" style={{ filter: 'drop-shadow(0 3px 6px rgba(0, 0, 0, 0.25))' }} />
+                <img src="/my-zikr-logo.png" alt="My.Zikr Logo" className="w-32 sm:w-36 md:w-40 h-32 sm:h-36 md:h-40 object-contain" style={{ filter: 'drop-shadow(0 3px 6px rgba(0, 0, 0, 0.25))' }} />
               </div>
             </div>
           </div>
@@ -2204,7 +2204,7 @@ export default function Home() {
           <div className="text-center mb-20" style={{ paddingTop: '80px' }}>
             {/* Logo Image */}
             <div className="mb-4 flex justify-center">
-              <img src="/my-zikr-logo-v2.svg" alt="My.Zikr Logo" className="w-36 md:w-40 h-36 md:h-40 object-contain" style={{ filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))' }} />
+              <img src="/my-zikr-logo.png" alt="My.Zikr Logo" className="w-36 md:w-40 h-36 md:h-40 object-contain" style={{ filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))' }} />
             </div>
 
             {/* Welcome Message */}
@@ -2316,7 +2316,7 @@ export default function Home() {
             <div className="mb-12 sm:mb-16">
               {/* Logo Image */}
               <div className="flex items-center justify-center mb-4">
-                <img src="/my-zikr-logo-v2.svg" alt="My.Zikr Logo" className="w-32 sm:w-36 h-32 sm:h-36 object-contain" style={{ filter: 'drop-shadow(0 3px 6px rgba(0, 0, 0, 0.25))' }} />
+                <img src="/my-zikr-logo.png" alt="My.Zikr Logo" className="w-32 sm:w-36 h-32 sm:h-36 object-contain" style={{ filter: 'drop-shadow(0 3px 6px rgba(0, 0, 0, 0.25))' }} />
               </div>
             </div>
 
@@ -2373,7 +2373,7 @@ export default function Home() {
           <div className="text-center mb-8 sm:mb-12 mt-16 sm:mt-20">
             {/* Logo Image */}
             <div className="mb-3 sm:mb-4 flex justify-center">
-              <img src="/my-zikr-logo-v2.svg" alt="My.Zikr Logo" className="w-36 sm:w-40 md:w-44 h-36 sm:h-40 md:h-44 object-contain" style={{ filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))' }} />
+              <img src="/my-zikr-logo.png" alt="My.Zikr Logo" className="w-36 sm:w-40 md:w-44 h-36 sm:h-40 md:h-44 object-contain" style={{ filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))' }} />
             </div>
           </div>
 
@@ -2525,9 +2525,9 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Dua Option Pills (Selection Choices) - Mobile Responsive */}
-          <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 mb-6 sm:mb-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 justify-items-center">
+          {/* Dua Option Pills (Selection Choices) - Mobile Responsive - 2 Column Grid */}
+          <div className="w-full max-w-2xl mx-auto px-4 sm:px-6 mb-6 sm:mb-8">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {[
                 'Anxiety',
                 'Sadness',
@@ -2544,7 +2544,7 @@ export default function Home() {
                 <button
                   key={category}
                   onClick={() => handleDuaCategorySelect(category)}
-                  className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium transition-colors whitespace-nowrap ${
+                  className={`px-3 sm:px-4 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium transition-colors whitespace-nowrap text-center ${
                     selectedDuaCategory === category
                       ? 'bg-slate-800 text-white'
                       : 'bg-cream text-gray-900 hover:bg-gray-100'
@@ -3954,7 +3954,7 @@ export default function Home() {
           <div className="text-center mb-12">
             {/* Logo Image */}
             <div className="mb-4 flex justify-center">
-              <img src="/my-zikr-logo-v2.svg" alt="My.Zikr Logo" className="w-40 md:w-48 h-40 md:h-48 object-contain" style={{ filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))' }} />
+              <img src="/my-zikr-logo.png" alt="My.Zikr Logo" className="w-40 md:w-48 h-40 md:h-48 object-contain" style={{ filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))' }} />
             </div>
 
             {/* Greeting */}
