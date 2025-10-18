@@ -1,40 +1,33 @@
-<svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <!-- Dark green to navy gradient background matching the design -->
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0D3B2E;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0B1E3A;stop-opacity:1" />
-    </linearGradient>
-  </defs>
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark green background (#0f2f2c) -->
+  <rect width="400" height="400" fill="#0f2f2c"/>
 
-  <!-- Background -->
-  <rect width="400" height="500" fill="url(#bgGradient)"/>
-
-  <!-- Calligraphic Arabic "ذِكْر" - Artistic strokes -->
+  <!-- Arabic Calligraphy "ذِكْر" with proper diacritics -->
   <g transform="translate(200, 140)">
-    <!-- Left stroke (ذ) -->
-    <path d="M -80 -40 Q -90 -20 -85 0 Q -80 20 -70 30" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M -75 -35 Q -65 -15 -60 5" stroke="white" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <!-- Letter "ذ" (Dhal) - large with curved tail sweeping downward -->
+    <path d="M -70 -60 Q -75 -40 -70 -20 Q -65 0 -55 20 Q -45 35 -30 45 Q -10 55 15 50 Q 35 45 45 30"
+          stroke="white" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
-    <!-- Center main curve (ك) -->
-    <path d="M -40 -50 Q 0 -60 40 -40 Q 60 -30 70 0 Q 75 30 60 50 Q 40 65 10 60 Q -20 55 -35 35" stroke="white" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Kasra diacritic (small diagonal comma below ذ) -->
+    <path d="M -65 35 Q -60 45 -50 50" stroke="white" stroke-width="5" fill="none" stroke-linecap="round"/>
 
-    <!-- Inner decorative curves -->
-    <path d="M -20 -20 Q 0 -10 20 0" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M -15 10 Q 5 20 25 15" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- Letter "ك" (Kaf) - smooth wave-like curve -->
+    <path d="M 50 -50 Q 70 -45 85 -30 Q 95 -15 100 0 Q 102 20 95 35 Q 85 50 70 55 Q 50 60 35 50"
+          stroke="white" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
-    <!-- Right stroke (ر) -->
-    <path d="M 75 -20 Q 95 -10 105 15 Q 110 35 100 50" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M 85 -15 Q 100 5 105 25" stroke="white" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <!-- Sukun diacritic (small curved mark above ك) -->
+    <path d="M 65 -55 Q 75 -60 85 -55" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
 
-    <!-- Decorative dots and marks -->
-    <circle cx="-50" cy="-45" r="4" fill="white"/>
-    <circle cx="55" cy="-35" r="5" fill="white"/>
-    <rect x="60" y="-25" width="8" height="8" fill="white" transform="rotate(45 64 -21)"/>
+    <!-- Letter "ر" (Ra) - elegant upward curve at end -->
+    <path d="M 110 -40 Q 130 -35 145 -15 Q 155 0 160 25 Q 158 45 145 55 Q 130 60 115 55 Q 105 50 100 35"
+          stroke="white" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Fatha diacritic (small mark above ر) -->
+    <path d="M 125 -50 L 140 -45" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
   </g>
 
-  <!-- App Name "My.Zikr" -->
-  <text x="200" y="420" font-family="Georgia, serif" font-size="48" font-weight="300" fill="white" text-anchor="middle" letter-spacing="3">
+  <!-- "My.Zikr" text in refined white serif font -->
+  <text x="200" y="300" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="400" fill="white" text-anchor="middle" letter-spacing="2">
     My.Zikr
   </text>
 </svg>
