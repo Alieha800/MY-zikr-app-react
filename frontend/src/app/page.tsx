@@ -795,14 +795,7 @@ export default function Home() {
     {
       id: 'discuss',
       icon: (
-        <div className="flex items-center justify-center">
-          <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none">
-            {/* First speech bubble - dark green */}
-            <path d="M8 12c0-2.21 1.79-4 4-4s4 1.79 4 4-1.79 4-4 4c-.55 0-1.08-.11-1.56-.31L8 17v-2.5c-1.25-.73-2-2.1-2-3.5z" fill="#0A7A33"/>
-            {/* Second speech bubble - cream/beige */}
-            <path d="M16 8c0-1.66 1.34-3 3-3s3 1.34 3 3-1.34 3-3 3c-.41 0-.8-.08-1.17-.23L16 12v-1.5c-.94-.55-1.5-1.58-1.5-2.5z" fill="#F5F5DC"/>
-          </svg>
-        </div>
+        <img src="/Discuss (2).png" alt="Discuss" className="w-6 h-6 object-contain" />
       ),
       text: 'Discuss'
     },
@@ -830,7 +823,7 @@ export default function Home() {
     {
       id: 'wall',
       icon: (
-        <img src="/Discuss (2).png" alt="Wall of duas" className="w-6 h-6 object-contain" />
+        <img src="/the walls of dua.png" alt="Wall of duas" className="w-6 h-6 object-contain" />
       ),
       text: 'The wall of duas'
     },
