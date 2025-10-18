@@ -809,8 +809,37 @@ export default function Home() {
     {
       id: 'duas',
       icon: (
-        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S15.33 8 14.5 8 13 8.67 13 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S8.33 8 7.5 8 6 8.67 6 9.5 6.67 11 7.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" fill="#0A7A33"/>
+        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="#0F2F2C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          {/* Left hand */}
+          {/* Left palm base */}
+          <path d="M4 14C4 12 5 8 8 8C9 8 9.5 9 9.5 10"/>
+          {/* Left thumb */}
+          <path d="M5 12C4 11 3 11 3 13C3 15 4 16 5 16"/>
+          {/* Left index finger */}
+          <path d="M7 8C7 6 7 4 7 3"/>
+          {/* Left middle finger */}
+          <path d="M9 8C9 5 9 3 9 2"/>
+          {/* Left ring finger */}
+          <path d="M11 8C11 6 11 4 11 3"/>
+          {/* Left pinky finger */}
+          <path d="M13 10C13 8 13 6 13 5"/>
+
+          {/* Right hand */}
+          {/* Right palm base */}
+          <path d="M20 14C20 12 19 8 16 8C15 8 14.5 9 14.5 10"/>
+          {/* Right thumb */}
+          <path d="M19 12C20 11 21 11 21 13C21 15 20 16 19 16"/>
+          {/* Right index finger */}
+          <path d="M17 8C17 6 17 4 17 3"/>
+          {/* Right middle finger */}
+          <path d="M15 8C15 5 15 3 15 2"/>
+          {/* Right ring finger */}
+          <path d="M13 8C13 6 13 4 13 3"/>
+          {/* Right pinky finger */}
+          <path d="M11 10C11 8 11 6 11 5"/>
+
+          {/* Center connection - prayer position */}
+          <path d="M12 10L12 18"/>
         </svg>
       ),
       text: 'Duas'
