@@ -1423,9 +1423,9 @@ export default function Home() {
               </svg>
             </button>
 
-            {/* Logo/App Name - Mobile Responsive */}
+            {/* Logo/App Name - Mobile Responsive - Icon Style */}
             <div className="flex-1 text-center flex justify-center">
-              <img src="/my-zikr-logo.png" alt="My.Zikr Logo" className="w-16 sm:w-18 md:w-20 h-16 sm:h-18 md:h-20 object-contain" style={{ filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2))' }} />
+              <img src="/my-zikr-icon-logo.svg" alt="My.Zikr Logo" className="w-16 sm:w-18 md:w-20 h-16 sm:h-18 md:h-20 object-contain" style={{ filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2))' }} />
             </div>
 
             {/* Notifications/Reminder - Mobile Responsive */}
