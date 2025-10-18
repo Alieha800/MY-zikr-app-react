@@ -25,17 +25,10 @@ export default function AuthPage() {
     <div className="min-h-screen bg-gradient-to-br from-teal-900 via-slate-900 to-indigo-950 flex flex-col items-center justify-center px-6 py-8">
       {/* Logo and Header Section */}
       <div className="text-center mb-12">
-        {/* Arabic Calligraphy Logo */}
+        {/* Logo Image */}
         <div className="mb-4">
-          <div className="text-6xl md:text-7xl text-white font-arabic mb-2">
-            ذِكْر
-          </div>
+          <img src="/my-zikr-logo.svg" alt="My.Zikr Logo" className="w-32 md:w-40 h-32 md:h-40 mx-auto mb-2" />
         </div>
-        
-        {/* App Name */}
-        <h1 className="text-2xl md:text-3xl text-white font-light mb-6">
-          My.Zikr
-        </h1>
         
         {/* Greeting */}
         <p className="text-white text-lg md:text-xl mb-8 font-light">

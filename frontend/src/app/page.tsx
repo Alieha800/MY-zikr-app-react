@@ -1004,17 +1004,10 @@ export default function Home() {
           <div className="flex-1 overflow-y-auto flex flex-col items-center justify-center px-4 sm:px-6 py-4 sm:py-8">
           {/* Logo and Header Section */}
           <div className="text-center mb-12">
-            {/* Arabic Calligraphy Logo */}
+            {/* Logo Image */}
             <div className="mb-4">
-              <div className="text-6xl md:text-7xl text-cream font-arabic mb-2">
-                ذِكْر
-              </div>
+              <img src="/my-zikr-logo.svg" alt="My.Zikr Logo" className="w-32 md:w-40 h-32 md:h-40 mx-auto mb-2" />
             </div>
-
-            {/* App Name */}
-            <h1 className="text-2xl md:text-3xl text-cream font-light tracking-wider mb-4">
-              My.Zikr
-            </h1>
 
             {/* Welcome Message */}
             <p className="text-cream text-sm md:text-base mb-4">
@@ -1431,8 +1424,7 @@ export default function Home() {
 
             {/* Logo/App Name - Mobile Responsive */}
             <div className="flex-1 text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl text-white font-arabic mb-1">ذِكْر</div>
-              <div className="text-sm sm:text-base md:text-lg text-white font-light">My.Zikr</div>
+              <img src="/my-zikr-logo.svg" alt="My.Zikr Logo" className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 mx-auto" />
             </div>
 
             {/* Notifications/Reminder - Mobile Responsive */}
@@ -2106,17 +2098,10 @@ export default function Home() {
                 🍃
               </div>
 
-              {/* Arabic Calligraphy Logo - Mobile Responsive */}
+              {/* Logo Image - Mobile Responsive */}
               <div className="mb-3 sm:mb-4">
-                <div className="text-4xl sm:text-5xl md:text-6xl text-white font-arabic mb-2 sm:mb-3">
-                  ذِكْر
-                </div>
+                <img src="/my-zikr-logo.svg" alt="My.Zikr Logo" className="w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32 mx-auto mb-2 sm:mb-3" />
               </div>
-
-              {/* App Name - Mobile Responsive */}
-              <h1 className="text-lg sm:text-xl md:text-2xl text-white font-light tracking-wider mb-6 sm:mb-8">
-                My.Zikr
-              </h1>
             </div>
           </div>
 
@@ -2216,17 +2201,10 @@ export default function Home() {
 
           {/* Logo Section */}
           <div className="text-center mb-20" style={{ paddingTop: '80px' }}>
-            {/* Arabic Calligraphy Logo */}
+            {/* Logo Image */}
             <div className="mb-4">
-              <div className="text-5xl md:text-6xl text-white font-arabic mb-3">
-                ذِكْر
-              </div>
+              <img src="/my-zikr-logo.svg" alt="My.Zikr Logo" className="w-28 md:w-32 h-28 md:h-32 mx-auto mb-3" />
             </div>
-
-            {/* App Name */}
-            <h1 className="text-xl md:text-2xl text-white font-light tracking-wider mb-12">
-              My.Zikr
-            </h1>
 
             {/* Welcome Message */}
             <h2 className="text-2xl md:text-3xl text-white font-bold mb-6 font-sans">
@@ -2333,19 +2311,12 @@ export default function Home() {
           {/* Content Container */}
           <div className="relative z-10 flex flex-col items-center justify-center max-w-md mx-auto text-center">
 
-            {/* Logo Section with Arabic Calligraphy */}
+            {/* Logo Section */}
             <div className="mb-12 sm:mb-16">
-              {/* Arabic Calligraphy */}
+              {/* Logo Image */}
               <div className="flex items-center justify-center mb-4">
-                <div className="text-4xl sm:text-5xl text-white font-arabic">
-                  ذِكْر
-                </div>
+                <img src="/my-zikr-logo.svg" alt="My.Zikr Logo" className="w-24 sm:w-28 h-24 sm:h-28" />
               </div>
-
-              {/* English Logo */}
-              <h1 className="text-xl sm:text-2xl text-white font-semibold tracking-wider" style={{ fontFamily: 'Inter, Poppins, sans-serif' }}>
-                My.Zikr
-              </h1>
             </div>
 
             {/* Rounded Beige Dialog Box with 3D Shadows - Animated */}
@@ -2399,17 +2370,10 @@ export default function Home() {
 
           {/* Header & Title Area */}
           <div className="text-center mb-8 sm:mb-12 mt-16 sm:mt-20">
-            {/* Arabic Title - Stylized Green Font */}
+            {/* Logo Image */}
             <div className="mb-3 sm:mb-4">
-              <div className="text-5xl sm:text-6xl md:text-7xl text-green-400 font-arabic mb-2">
-                ذِكْر
-              </div>
+              <img src="/my-zikr-logo.svg" alt="My.Zikr Logo" className="w-28 sm:w-32 md:w-36 h-28 sm:h-32 md:h-36 mx-auto mb-2" />
             </div>
-
-            {/* English Title - Centered Below Arabic */}
-            <h1 className="text-xl sm:text-2xl md:text-3xl text-white font-light tracking-wider">
-              My.Zikr
-            </h1>
           </div>
 
           {/* Welcome Message Box - Dark Green Background */}
@@ -3987,17 +3951,10 @@ export default function Home() {
         <>
           {/* Logo and Header Section */}
           <div className="text-center mb-12">
-            {/* Arabic Calligraphy Logo */}
+            {/* Logo Image */}
             <div className="mb-4">
-              <div className="text-6xl md:text-7xl text-cream font-arabic mb-2">
-                ذِكْر
-              </div>
+              <img src="/my-zikr-logo.svg" alt="My.Zikr Logo" className="w-32 md:w-40 h-32 md:h-40 mx-auto mb-2" />
             </div>
-
-            {/* App Name */}
-            <h1 className="text-2xl md:text-3xl text-cream font-light mb-6">
-              My.Zikr
-            </h1>
 
             {/* Greeting */}
             <p className="text-cream text-lg md:text-xl mb-8 font-light">
