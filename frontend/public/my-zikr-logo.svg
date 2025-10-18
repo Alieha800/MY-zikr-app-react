@@ -2,32 +2,32 @@
   <!-- Dark green background (#0f2f2c) -->
   <rect width="400" height="400" fill="#0f2f2c"/>
 
-  <!-- Arabic Calligraphy "ذِكْر" with proper diacritics -->
-  <g transform="translate(200, 140)">
+  <!-- Arabic Calligraphy "ذِكْر" with proper diacritics - BOLD and VISIBLE -->
+  <g transform="translate(200, 130)">
     <!-- Letter "ذ" (Dhal) - large with curved tail sweeping downward -->
-    <path d="M -70 -60 Q -75 -40 -70 -20 Q -65 0 -55 20 Q -45 35 -30 45 Q -10 55 15 50 Q 35 45 45 30"
-          stroke="white" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M -80 -70 Q -90 -50 -85 -20 Q -75 10 -55 35 Q -35 55 -5 65 Q 25 70 50 55"
+          stroke="white" stroke-width="24" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
     <!-- Kasra diacritic (small diagonal comma below ذ) -->
-    <path d="M -65 35 Q -60 45 -50 50" stroke="white" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M -70 50 Q -60 65 -45 70" stroke="white" stroke-width="7" fill="none" stroke-linecap="round"/>
 
     <!-- Letter "ك" (Kaf) - smooth wave-like curve -->
-    <path d="M 50 -50 Q 70 -45 85 -30 Q 95 -15 100 0 Q 102 20 95 35 Q 85 50 70 55 Q 50 60 35 50"
-          stroke="white" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 60 -65 Q 85 -60 105 -40 Q 120 -20 125 10 Q 128 40 110 65 Q 85 80 55 75 Q 30 70 20 50"
+          stroke="white" stroke-width="24" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
     <!-- Sukun diacritic (small curved mark above ك) -->
-    <path d="M 65 -55 Q 75 -60 85 -55" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M 80 -75 Q 95 -85 110 -75" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
 
     <!-- Letter "ر" (Ra) - elegant upward curve at end -->
-    <path d="M 110 -40 Q 130 -35 145 -15 Q 155 0 160 25 Q 158 45 145 55 Q 130 60 115 55 Q 105 50 100 35"
-          stroke="white" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 130 -50 Q 155 -45 175 -20 Q 190 5 195 35 Q 192 65 170 80 Q 145 90 120 80 Q 105 70 100 50"
+          stroke="white" stroke-width="24" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
     <!-- Fatha diacritic (small mark above ر) -->
-    <path d="M 125 -50 L 140 -45" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M 150 -65 L 170 -55" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
   </g>
 
-  <!-- "My.Zikr" text in refined white serif font -->
-  <text x="200" y="300" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="400" fill="white" text-anchor="middle" letter-spacing="2">
+  <!-- "My.Zikr" text in refined white serif font - BOLD -->
+  <text x="200" y="310" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="700" fill="white" text-anchor="middle" letter-spacing="3">
     My.Zikr
   </text>
 </svg>

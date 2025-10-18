@@ -26,8 +26,8 @@ export default function AuthPage() {
       {/* Logo and Header Section */}
       <div className="text-center mb-12">
         {/* Logo Image */}
-        <div className="mb-4">
-          <img src="/my-zikr-logo.svg" alt="My.Zikr Logo" className="w-32 md:w-40 h-32 md:h-40 mx-auto mb-2" />
+        <div className="mb-4 flex justify-center">
+          <img src="/my-zikr-logo.svg" alt="My.Zikr Logo" className="w-40 md:w-48 h-40 md:h-48 object-contain" style={{ filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))' }} />
         </div>
         
         {/* Greeting */}
