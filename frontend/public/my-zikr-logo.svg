@@ -1,22 +1,40 @@
-<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-  <!-- Dark green to navy gradient background -->
+<svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <!-- Dark green to navy gradient background matching the design -->
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0D3B2E;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#0B1E3A;stop-opacity:1" />
     </linearGradient>
   </defs>
-  
+
   <!-- Background -->
-  <rect width="400" height="400" fill="url(#bgGradient)"/>
-  
-  <!-- Arabic Calligraphy "ذِكْر" -->
-  <text x="200" y="180" font-family="Amiri, serif" font-size="120" font-weight="700" fill="white" text-anchor="middle" dominant-baseline="middle">
-    ذِكْر
-  </text>
-  
+  <rect width="400" height="500" fill="url(#bgGradient)"/>
+
+  <!-- Calligraphic Arabic "ذِكْر" - Artistic strokes -->
+  <g transform="translate(200, 140)">
+    <!-- Left stroke (ذ) -->
+    <path d="M -80 -40 Q -90 -20 -85 0 Q -80 20 -70 30" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M -75 -35 Q -65 -15 -60 5" stroke="white" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+    <!-- Center main curve (ك) -->
+    <path d="M -40 -50 Q 0 -60 40 -40 Q 60 -30 70 0 Q 75 30 60 50 Q 40 65 10 60 Q -20 55 -35 35" stroke="white" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Inner decorative curves -->
+    <path d="M -20 -20 Q 0 -10 20 0" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M -15 10 Q 5 20 25 15" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+    <!-- Right stroke (ر) -->
+    <path d="M 75 -20 Q 95 -10 105 15 Q 110 35 100 50" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 85 -15 Q 100 5 105 25" stroke="white" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+    <!-- Decorative dots and marks -->
+    <circle cx="-50" cy="-45" r="4" fill="white"/>
+    <circle cx="55" cy="-35" r="5" fill="white"/>
+    <rect x="60" y="-25" width="8" height="8" fill="white" transform="rotate(45 64 -21)"/>
+  </g>
+
   <!-- App Name "My.Zikr" -->
-  <text x="200" y="280" font-family="Inter, Poppins, sans-serif" font-size="32" font-weight="300" fill="white" text-anchor="middle" letter-spacing="2">
+  <text x="200" y="420" font-family="Georgia, serif" font-size="48" font-weight="300" fill="white" text-anchor="middle" letter-spacing="3">
     My.Zikr
   </text>
 </svg>
