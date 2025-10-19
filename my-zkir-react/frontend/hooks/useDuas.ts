@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { DuaData, DuaCategory, DuaContent, DuaSelectionState } from '../types/duas';
-import duasData from '../data/duas.json';
+import { DuaData, DuaCategory, DuaContent, DuaSelectionState } from '@/types/duas';
+import duasData from '@/data/duas.json';
 
 export const useDuas = () => {
   const [duaData] = useState<DuaData>(duasData as DuaData);
