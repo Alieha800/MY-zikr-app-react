@@ -1475,7 +1475,7 @@ export default function Home() {
                 {/* Transliteration */}
                 <div className="text-center mb-2 sm:mb-3">
                   <p className="text-gray-900 font-medium text-sm sm:text-base">
-                    Allāhumainnaka afuwwun tuhibbul afwa fa'fu annī
+                    Allāhumainnaka afuwwun tuhibbul afwa fa&apos;fu annī
                   </p>
                 </div>
 

@@ -118,7 +118,7 @@ export default function AuthPage() {
         <div className="mb-8">
           <div className="bg-emerald-800/80 rounded-2xl rounded-tl-sm p-6 max-w-md mx-auto">
             <p className="text-white text-base leading-relaxed">
-              That's great! Please find below the Reminders I can help you with. May Allah ease your journey and help you memorise them. Ameen
+              That&apos;s great! Please find below the Reminders I can help you with. May Allah ease your journey and help you memorise them. Ameen
             </p>
           </div>
         </div>

@@ -141,7 +141,7 @@ const AuthenticDuaSelection: React.FC<AuthenticDuaSelectionProps> = ({
         <div className="mb-8">
           <div className="bg-emerald-800/80 rounded-2xl rounded-tl-sm p-6 max-w-md mx-auto">
             <p className="text-white text-base leading-relaxed">
-              That's great! I can help you with duas from Hisnul Muslim and from the Holy Qur'an. Please choose below with dua you would like to read.
+              That&apos;s great! I can help you with duas from Hisnul Muslim and from the Holy Qur&apos;an. Please choose below with dua you would like to read.
             </p>
           </div>
         </div>
