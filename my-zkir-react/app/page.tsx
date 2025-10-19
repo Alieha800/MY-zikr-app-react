@@ -120,6 +120,13 @@ export default function Home() {
     email: '',
     password: ''
   });
+  const [formErrors, setFormErrors] = useState({
+    name: '',
+    email: '',
+    password: ''
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [signupError, setSignupError] = useState('');
 
   // Centralized navigation function
   const navigateToScreen = (screenName: string, options: Record<string, string | boolean | number> = {}) => {
@@ -280,10 +287,24 @@ export default function Home() {
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     });
+
+    // Clear error for this field when user starts typing
+    if (formErrors[name as keyof typeof formErrors]) {
+      setFormErrors({
+        ...formErrors,
+        [name]: ''
+      });
+    }
+
+    // Clear general signup error
+    if (signupError) {
+      setSignupError('');
+    }
   };
 
   const handleLoginInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -293,12 +314,94 @@ export default function Home() {
     });
   };
 
-  const handleSignUp = () => {
-    // TODO: Implement sign up logic
-    console.log('Sign up with:', formData);
-    // Store user name and redirect to welcome adnan screen after successful registration
-    setUserName(formData.name);
-    navigateToScreen('welcome-adnan');
+  const validateForm = () => {
+    const errors = { name: '', email: '', password: '' };
+    let isValid = true;
+
+    // Name validation
+    if (!formData.name.trim()) {
+      errors.name = 'Full name is required';
+      isValid = false;
+    } else if (formData.name.trim().length < 2) {
+      errors.name = 'Name must be at least 2 characters';
+      isValid = false;
+    }
+
+    // Email validation
+    if (!formData.email.trim()) {
+      errors.email = 'Email is required';
+      isValid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      errors.email = 'Please enter a valid email address';
+      isValid = false;
+    }
+
+    // Password validation
+    if (!formData.password) {
+      errors.password = 'Password is required';
+      isValid = false;
+    } else if (formData.password.length < 6) {
+      errors.password = 'Password must be at least 6 characters';
+      isValid = false;
+    }
+
+    setFormErrors(errors);
+    return isValid;
+  };
+
+  const handleSignUp = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      setSignupError('Please fix the errors above');
+      return;
+    }
+
+    setIsLoading(true);
+    setSignupError('');
+
+    try {
+      // Simulate API call delay
+      await new Promise(resolve => setTimeout(resolve, 1500));
+
+      // Check if user already exists (simple check for demo)
+      const existingUsers = JSON.parse(localStorage.getItem('myZikrUsers') || '[]');
+      const userExists = existingUsers.find((user: any) => user.email === formData.email);
+
+      if (userExists) {
+        setSignupError('An account with this email already exists');
+        setIsLoading(false);
+        return;
+      }
+
+      // Create new user
+      const newUser = {
+        id: Date.now().toString(),
+        name: formData.name.trim(),
+        email: formData.email.trim().toLowerCase(),
+        password: formData.password, // In real app, this would be hashed
+        createdAt: new Date().toISOString(),
+        isAuthenticated: true
+      };
+
+      // Save to localStorage (in real app, this would be sent to backend)
+      existingUsers.push(newUser);
+      localStorage.setItem('myZikrUsers', JSON.stringify(existingUsers));
+      localStorage.setItem('myZikrCurrentUser', JSON.stringify(newUser));
+
+      // Store user name and redirect to welcome adnan screen after successful registration
+      setUserName(formData.name);
+      setIsAuthenticated(true);
+
+      // Navigate to welcome screen
+      navigateToScreen('welcome-adnan');
+
+    } catch (error) {
+      console.error('Signup error:', error);
+      setSignupError('Something went wrong. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleLogin = () => {
@@ -1055,6 +1158,16 @@ export default function Home() {
               <p className="text-cream text-base md:text-lg mb-4">
                 Sign in to continue.
               </p>
+            ) : showEmailForm && !isLogin ? (
+              <p className="text-cream text-base md:text-lg mb-8">
+                Already Registered?{' '}
+                <button
+                  onClick={() => setIsLogin(!isLogin)}
+                  className="underline hover:text-gray-300 transition-colors font-medium"
+                >
+                  Log in here
+                </button>
+              </p>
             ) : !showEmailForm ? (
               <p className="text-cream text-base md:text-lg">
                 {isLogin ? "Don't have an account? " : "Already Registered? "}
@@ -1126,60 +1239,94 @@ export default function Home() {
             </button>
           </div>
         ) : (
-          /* Screen 2: Email Registration Form - Grid Layout */
-          <div className="w-full max-w-2xl px-4">
-            {/* Grid Container */}
-            <div className="space-y-3 flex flex-col items-center">
-              {/* Row 1 - 3 items */}
-              <div className="grid grid-cols-3 gap-3">
+          /* Screen 2: Email Registration Form - Vertical Layout */
+          <div className="w-full max-w-sm px-4">
+            <form onSubmit={handleSignUp} className="space-y-6">
+              {/* Error message display */}
+              {signupError && (
+                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg text-sm text-center">
+                  {signupError}
+                </div>
+              )}
+
+              {/* Name Field */}
+              <div>
+                <label className="block text-cream text-sm font-medium mb-2">
+                  NAME
+                </label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  placeholder="Your full name"
-                  className="py-2 px-4 bg-slate-100 text-slate-900 placeholder-slate-500 rounded-full border-none focus:outline-none focus:ring-2 focus:ring-teal-500 text-xs font-medium text-center whitespace-nowrap"
+                  placeholder="Jiara Martins"
+                  className={`w-full py-3 px-4 bg-slate-600 text-cream placeholder-gray-300 rounded-lg border-none focus:outline-none focus:ring-2 ${
+                    formErrors.name ? 'focus:ring-red-500' : 'focus:ring-teal-500'
+                  }`}
                 />
+                {formErrors.name && (
+                  <p className="text-red-400 text-xs mt-1">{formErrors.name}</p>
+                )}
+              </div>
+
+              {/* Email Field */}
+              <div>
+                <label className="block text-cream text-sm font-medium mb-2">
+                  EMAIL
+                </label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  placeholder="Email"
-                  className="py-2 px-4 bg-slate-100 text-slate-900 placeholder-slate-500 rounded-full border-none focus:outline-none focus:ring-2 focus:ring-teal-500 text-xs font-medium text-center whitespace-nowrap"
+                  placeholder="hello@reallygreatsite.com"
+                  className={`w-full py-3 px-4 bg-slate-600 text-cream placeholder-gray-300 rounded-lg border-none focus:outline-none focus:ring-2 ${
+                    formErrors.email ? 'focus:ring-red-500' : 'focus:ring-teal-500'
+                  }`}
                 />
+                {formErrors.email && (
+                  <p className="text-red-400 text-xs mt-1">{formErrors.email}</p>
+                )}
+              </div>
+
+              {/* Password Field */}
+              <div>
+                <label className="block text-cream text-sm font-medium mb-2">
+                  PASSWORD
+                </label>
                 <input
                   type="password"
                   name="password"
                   value={formData.password}
                   onChange={handleInputChange}
-                  placeholder="Password"
-                  className="py-2 px-4 bg-slate-100 text-slate-900 placeholder-slate-500 rounded-full border-none focus:outline-none focus:ring-2 focus:ring-teal-500 text-xs font-medium text-center whitespace-nowrap"
+                  placeholder="••••••"
+                  className={`w-full py-3 px-4 bg-slate-600 text-cream placeholder-gray-300 rounded-lg border-none focus:outline-none focus:ring-2 ${
+                    formErrors.password ? 'focus:ring-red-500' : 'focus:ring-teal-500'
+                  }`}
                 />
+                {formErrors.password && (
+                  <p className="text-red-400 text-xs mt-1">{formErrors.password}</p>
+                )}
               </div>
 
-              {/* Row 2 - 2 items centered */}
-              <div className="grid grid-cols-2 gap-3 max-w-xs mx-auto">
-                <button
-                  onClick={() => {
-                    console.log('Registration attempt:', formData);
-                    // Simulate successful registration
-                    setIsAuthenticated(true);
-                    setShowEmailForm(false);
-                    setShowWelcomeAdnanScreen(true);
-                  }}
-                  className="bg-slate-100 hover:bg-slate-200 text-slate-900 py-2 px-4 rounded-full text-xs font-medium transition-colors"
-                >
-                  Sign Up
-                </button>
-                <button
-                  onClick={handleBackToOptions}
-                  className="bg-slate-100 hover:bg-slate-200 text-slate-900 py-2 px-4 rounded-full text-xs font-medium transition-colors"
-                >
-                  Back
-                </button>
-              </div>
-            </div>
+              {/* Terms and Conditions */}
+              <p className="text-cream text-xs text-center">
+                By clicking below, you agree <a href="#" className="underline hover:text-gray-300">terms and conditions</a> of My zikr.
+              </p>
+
+              {/* Sign Up button */}
+              <button
+                type="submit"
+                disabled={isLoading}
+                className={`w-full py-3 px-4 rounded-lg border-2 font-medium transition-colors ${
+                  isLoading
+                    ? 'bg-gray-600 text-gray-400 border-gray-600 cursor-not-allowed'
+                    : 'bg-transparent border-cream text-cream hover:bg-cream hover:text-slate-900'
+                }`}
+              >
+                {isLoading ? 'Creating Account...' : 'Sign up'}
+              </button>
+            </form>
           </div>
         )
       ) : (
