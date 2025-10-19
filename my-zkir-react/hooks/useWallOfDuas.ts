@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { WallOfDuasData, CommunityDua, WallOfDuasState, UserLocation, WallSettings } from '@/types/wallOfDuas';
-import wallData from '@/data/wallOfDuas.json';
+import { WallOfDuasData, CommunityDua, WallOfDuasState, UserLocation, WallSettings } from '../types/wallOfDuas';
+import wallData from '../data/wallOfDuas.json';
 
 export const useWallOfDuas = () => {
   const [wallOfDuasData] = useState<WallOfDuasData>(wallData as WallOfDuasData);

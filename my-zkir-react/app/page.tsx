@@ -2,8 +2,8 @@
 
 // Logo updated with Arabic text rendering - v2
 import { useState, useEffect, useRef } from 'react';
-import { useDuas } from '@/hooks/useDuas';
-import { useWallOfDuas } from '@/hooks/useWallOfDuas';
+import { useDuas } from '../hooks/useDuas';
+import { useWallOfDuas } from '../hooks/useWallOfDuas';
 import AuthenticDuaSelection from './components/AuthenticDuaSelection';
 
 export default function Home() {
